@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700");
+
 :root {
   /*========== colors ==========*/
   /*color mode hsl(hue, saturation, lightness)*/
@@ -9,6 +11,11 @@
   /*.5rem = 8px | 1rem = 16px ...*/
   --biggest-font-size: 2.5rem;
 
+  /*========== envelop ==========*/
+  --paper: #fcfcf8;
+  --envelope: #e9dc9d;
+  --ink: #4e5e72;
+  --lines: rgb(229, 225, 187);
 }
 
 * {
@@ -78,7 +85,7 @@ body {
   height: 24px;
 }
 
-.contact-section {
+.card-contact-section {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -87,7 +94,7 @@ body {
   margin-bottom: 20px;
 }
 
-.contact-section a {
+.card-contact-section a {
   font-size: 20px;
   gap: 20px;
   display: flex;
@@ -96,7 +103,7 @@ body {
   align-items: center;
 }
 
-.contact-section a svg,
+.card-contact-section a svg,
 .social-media a svg {
   border: 1px solid hsl(0, 2%, 26%);
   border-radius: 5px;
@@ -122,7 +129,7 @@ body {
   fill: white;
 }
 
-.contact-section a svg:active {
+.card-contact-section a svg:active {
   /* 1. Move the element to where its shadow was */
   transform: translate(-4px, 4px);
   /* 2. Remove the shadow to make it look like the button was pressed */
@@ -136,6 +143,7 @@ body {
   background-color: var(--background-color2);
   border-radius: 20px;
   padding-bottom: 20px;
+  display: none;
 }
 
 .nav-menu {
@@ -225,95 +233,382 @@ body {
 
 
 /*--===================Resume Section =====================--*/
-    .section-container {
-      margin-top: 0px;
-      padding-top: 20px;
-      width: 100%;
-      background-color: var(--background-color2);
-      border-radius: 20px;
-      padding-bottom: 20px;
-      display: none;
-    }
+#resume-section {
+  margin-top: 0px;
+  padding-top: 20px;
+  width: 100%;
+  background-color: var(--background-color2);
+  border-radius: 20px;
+  padding-bottom: 20px;
+  display: none;
+}
 
-    .wrapper {
-      padding: 1.5rem;
-      border-radius: 15px;
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    .timeline-title {
-      font-size: 2.5rem;
-      font-family: sans-serif;
-    }
-
-    .sessions {
-      border-radius: 12px;
-      position: relative;
-      list-style-type: none; /* Removed default list bullets */
-      padding-left: 0;
-    }
-
-    .timeline-item {
-      padding-bottom: 1.5rem;
-      border-left: 1px solid #abaaed;
-      position: relative;
-      padding-left: 20px;
-      margin-left: 10px;
-    }
-
-    .timeline-item:last-child {
-      padding-bottom: 0;
-    }
-
-    .timeline-item::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      background: hsl(65, 100%, 50%);
-      border: 1px solid #4e5ed3;
-      box-shadow: 0px 0px 10px hsl(96, 100%, 50%);
-      border-radius: 50%;
-      position: absolute;
-      left: -7px;
-      top: 0px;
-    }
-
-    
-    .timeline-item:first-child::before {
-      content: ''; 
-      border: none;
-      box-shadow: none;
-
-      width: 34px;   
-      height: 34px;  
-      left: -18px;   
-      top: 0px;      
-
-      background-color: hsl(0, 1%, 17%);
-      border-radius: 4px; 
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='hsl(65, 100%, 50%)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'/><path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/></svg>");
-      background-size: 26px 26px; /* Icon size */
-      background-repeat: no-repeat;
-      background-position: center center; /* Center the icon */
-    }
-    .timeline-item:first-child{
-      padding-top: .2rem;
-      font-size: 1.5rem;
-      text-justify: center;
-    }
+.wrapper {
+  padding: 1.5rem;
+  border-radius: 15px;
+  max-width: 100%;
+  margin: 0 auto;
+}
 
 
-    /* Your other styles */
-    .timeline-item-title { /* Changed .title to .time to match HTML */
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-    }
+.sessions {
+  border-radius: 12px;
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+}
 
-    p {
-      color: white;
-      font-family: sans-serif;
-      line-height: 1.5;
-      margin-top: 0.4rem;
-    }
+.timeline-item {
+  padding-bottom: 1.5rem;
+  border-left: 1px solid #abaaed;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: hsl(65, 100%, 50%);
+  border: 1px solid #4e5ed3;
+  box-shadow: 0px 0px 10px hsl(96, 100%, 50%);
+  border-radius: 50%;
+  position: absolute;
+  left: -7px;
+  top: 0px;
+}
+
+
+.timeline-item:first-child::before {
+  content: '';
+  border: none;
+  box-shadow: none;
+
+  width: 34px;
+  height: 34px;
+  left: -18px;
+  top: 0px;
+
+  background-color: hsl(0, 1%, 17%);
+  border-radius: 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='hsl(65, 100%, 50%)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'/><path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/></svg>");
+  background-size: 26px 26px;
+  /* Icon size */
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* Center the icon */
+}
+
+.timeline-item:first-child {
+  padding-top: .2rem;
+  font-size: 1.5rem;
+  text-justify: center;
+}
+
+.timeline-item-title {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+p {
+  color: white;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+
+/*--============================= Contact Section ==============================--*/
+
+#contact-section {
+  padding-top:3rem;
+  color: var(--ink);
+  text-align: center;
+  font-family: monospace;
+  min-height: 20rem;
+  background-color: var(--background-color2);
+}
+
+#contact-section h1 {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+}
+
+#contact-section small {
+  display: block;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  transition: opacity 0.33s;
+}
+
+/* ---- Inputs ---- */
+#contact-section textarea,
+#contact-section input,
+#contact-section button {
+  line-height: 1.5rem;
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  appearance: none;
+}
+
+#contact-section textarea,
+#contact-section input {
+  color: var(--ink);
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229,225,187)' x='0' y='23' width='10' height='1'/></svg>");
+}
+
+#contact-section textarea {
+  width: 100%;
+  height: 8rem;
+  resize: none;
+}
+
+#contact-section input {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+#contact-section input:invalid {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(240,132,114,0.5)' x='0' y='23' width='10' height='1'/></svg>");
+}
+
+#contact-section input:focus,
+#contact-section textarea:focus {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(78,94,114,0.3)' x='0' y='23' width='10' height='1'/></svg>");
+}
+
+/* ---- Button ---- */
+#contact-section button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: rgba(78, 94, 114, 0.9);
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+#contact-section button:hover,
+#contact-section button:focus {
+  background-color: rgba(78, 94, 114, 1);
+}
+
+/* ---- Layout ---- */
+#contact-section .wrapper {
+  background-color: transparent;
+  position: relative;
+  margin: 0 auto;
+}
+
+#contact-section .letter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  perspective: 60rem;
+  z-index: 2;
+}
+
+#contact-section .side {
+  height: 12rem;
+  background-color: var(--paper);
+  outline: 1px solid transparent;
+}
+
+#contact-section .side:nth-of-type(1) {
+  padding: 2rem 2rem 0;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+}
+
+#contact-section .side:nth-of-type(2) {
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05),
+    inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
+  text-align: right;
+}
+
+/* ---- Envelope ---- */
+#contact-section .envelope {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}
+
+#contact-section .envelope.front {
+  width: 10rem;
+  height: 6rem;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+  z-index: 10;
+  opacity: 0;
+}
+
+#contact-section .envelope.front::before,
+#contact-section .envelope.front::after {
+  position: absolute;
+  display: block;
+  width: 12rem;
+  height: 6rem;
+  background-color: var(--envelope);
+  transform: rotate(30deg);
+  transform-origin: 0 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  content: "";
+}
+
+#contact-section .envelope.front::after {
+  right: 0;
+  transform: rotate(-30deg);
+  transform-origin: 100% 0;
+}
+
+#contact-section .envelope.back {
+  top: -4rem;
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-6rem);
+}
+
+#contact-section .envelope.back::before {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--envelope);
+  border-radius: 1rem;
+  content: "";
+  transform: scaleY(0.6) rotate(45deg);
+}
+
+#contact-section .result-message {
+  position: relative;
+  opacity: 0;
+  transform: translateY(2rem); /* start slightly below */
+  transition:
+    transform 1s ease-out 1s,  /* slide-up over 1s, starts after 1s delay */
+    opacity 2s ease-in 1s;     /* fade-in over 2s, starts after 1s delay */
+  text-align: center;
+  font-weight: bold;
+}
+
+#contact-section.sent .result-message {
+  opacity: 1;
+  transform: translateY(9rem); 
+  color: green;
+}
+
+#contact-section .result-message.error {
+  opacity: 1;
+  transform: translateY(0);
+  color: red;
+  transition: opacity 0.5s ease-in;
+  z-index: 5;
+  font-size: .8rem;
+  transform: translateY(18rem); 
+}
+
+#contact-section .centered {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 1rem auto;
+}
+
+/* ---- Animation triggers ---- */
+#contact-section.sent .letter {
+  animation: scaleLetter 1s forwards ease-in;
+}
+
+#contact-section.sent .side:nth-of-type(1) {
+  transform-origin: 0 100%;
+  animation: closeLetter 0.66s forwards ease-in;
+}
+
+#contact-section.sent .side:nth-of-type(1) h1,
+#contact-section.sent .side:nth-of-type(1) textarea {
+  animation: fadeOutText 0.66s forwards linear;
+}
+
+#contact-section.sent button {
+  background-color: rgba(78, 94, 114, 0.2);
+}
+
+#contact-section.sent .envelope {
+  animation: fadeInEnvelope 0.5s 1.33s forwards ease-out;
+}
+
+
+
+#contact-section.sent small {
+  opacity: 0;
+}
+
+/* ---- Keyframes ---- */
+@keyframes closeLetter {
+  50% {
+    transform: rotateX(-90deg);
+  }
+
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes fadeOutText {
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInEnvelope {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(4.5rem);
+  }
+}
+
+@keyframes scaleLetter {
+  66% {
+    transform: translateY(-8rem) scale(0.5, 0.5);
+  }
+
+  75% {
+    transform: translateY(-8rem) scale(0.5, 0.5);
+  }
+
+  90% {
+    transform: translateY(-8rem) scale(0.3, 0.5);
+  }
+
+  97% {
+    transform: translateY(-8rem) scale(0.33, 0.5);
+  }
+
+  100% {
+    transform: translateY(-8rem) scale(0.45, 0.5);
+  }
+}

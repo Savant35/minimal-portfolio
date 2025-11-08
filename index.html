@@ -18,8 +18,7 @@
       <hr>
     </div>
 
-    <div class="contact-section">
-
+    <div class="card-contact-section">
 
       <a href="mailto:your.email@example.com" class="email-link" aria-label="send me a email">
         <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -169,7 +168,7 @@
 
     </section>
 
-    <section class="section-container">
+    <section class="section-container" id="resume-section">
       <div class="wrapper">
 
         <ul class="sessions">
@@ -180,7 +179,8 @@
             <div class="timeline-item-title">Research intern</div>
             <p>May 20205 - June 2025</p>
             <p>Developed a full-stack, AI-powered tutoring assistant using Next.js, Supabase for the database, and Vapi
-              forconversational AI. The platform allowed professors to upload structured lesson plans, enabling the AI to deliver
+              forconversational AI. The platform allowed professors to upload structured lesson plans, enabling the AI
+              to deliver
               tailored instruction and provide instant answers to student questions.</p>
           </li>
 
@@ -190,6 +190,7 @@
             <p>Designed and developed a full-featured web application using Next.js, TailwindCSS, GSAP, and Three.js,
               transforming static resources into an interactive platform.</p>
           </li>
+
           <li class="timeline-item">
             <div class="timeline-item-title"> <i> Web developer/tutor </i></div>
             <p>January 2022 - January 2023</p>
@@ -197,14 +198,38 @@
               students,specializing in Object-Oriented Design and clean code practices alongside core languages like
               Java,Python,HTML, and CSS.</p>
           </li>
-          
         </ul>
       </div>
-
     </section>
+
+    <section id="contact-section">
+
+  <div class="wrapper">
+    <form class="letter" id="contactForm">
+      <div class="side">
+        <h1>Contact us</h1>
+        <textarea name="message" placeholder="Your message (optional)"></textarea>
+      </div>
+      <div class="side">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <button id="sendLetter" type="submit">Send</button>
+      </div>
+    </form>
+
+    <div class="envelope front"></div>
+    <div class="envelope back"></div>
+  <p class="result-message centered">Thank you for your message!</p>
+  </div>
+
+</section>
+
+
 
   </main>
 
+  <script src="js/script.js"></script>
 </body>
+
 
 </html>
