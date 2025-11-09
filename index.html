@@ -204,25 +204,71 @@
 
     <section id="contact-section">
 
-  <div class="wrapper">
-    <form class="letter" id="contactForm">
-      <div class="side">
-        <h1>Contact us</h1>
-        <textarea name="message" placeholder="Your message (optional)"></textarea>
-      </div>
-      <div class="side">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <button id="sendLetter" type="submit">Send</button>
-      </div>
-    </form>
+      <div class="wrapper">
+        <form class="letter" id="contactForm">
+          <div class="side">
+            <h1>Contact me</h1>
+            <textarea name="message" placeholder="Your message" required></textarea>
+          </div>
+          <div class="side">
+            <input type="text" name="name" placeholder="Jane Doe" required>
+            <input type="email" name="email" placeholder="janeDoe@gmail.com" required>
+            <input type="tel" name="phone" placeholder="123-456-7890 (optional)" placeholder="123-456-7890"
+              title="Format: 123-456-7890" maxlength="20">
+            <button id=" sendLetter" type="submit">Send</button>
+          </div>
+        </form>
 
-    <div class="envelope front"></div>
-    <div class="envelope back"></div>
-  <p class="result-message centered">Thank you for your message!</p>
-  </div>
+        <div class="envelope front"></div>
+        <div class="envelope back"></div>
+        <p class="result-message centered">Thank you for your message!</p>
+      </div>
 
-</section>
+    </section>
+
+    <section id="portfolio-section">
+
+      <p class="section-title">My Projects</p>
+
+      <div id="portfolio-container">
+        <a href="https://omnitutorai.aliarthur.com/" target="_blank">
+          <img src="./assets/project2.png" alt="AI-powered tutorign website" loading="lazy">
+          <p id="project-title">omnitutor</p>
+          <p id="project-description">AI - Powered Tutring assistant</p>
+        </a>
+
+        <a href="https://www.aliarthur.com/" target="_blank">
+          <img src="./assets/project1.png" alt="AI-powered tutorign website" loading="lazy">
+          <p id="project-title">3D Portfolio</p>
+          <p id="project-description">Person portfolio with Gsap animations</p>
+        </a>
+
+        <a href="https://mcnair.aliarthur.com/" target="_blank">
+          <img src="./assets/project3.png" alt="AI-powered tutorign website" loading="lazy">
+          <p id="project-title">McNair design 1</p>
+          <p id="project-description">GU McNair Prototype Website</p>
+        </a>
+
+        <a href="https://mcnair.aliarthur.com/">
+          <img src="./assets/project4.png" alt="AI-powered tutorign website" loading="lazy">
+          <p id="project-title">McNair Website</p>
+          <p id="project-description">GU McNair Website built</p>
+        </a>
+
+        <a href="https://github.com/Savant35/filmfinder/">
+          <img src="./assets/project5.png" alt="AI-powered tutorign website" loading="lazy">
+          <p id="project-title">FilmFinder</p>
+          <p id="project-description">Python movie finder</p>
+        </a>
+
+        <a href="https://github.com/Savant35/aiflappybird">
+          <img src="./assets/project6.png" alt="AI-powered tutorign website" loading="lazy">
+          <p id="project-title">flappbird</p>
+          <p id="project-description">flappbird game utilizing genetic algorithms</p>
+        </a>
+      </div>
+
+    </section>
 
 
 

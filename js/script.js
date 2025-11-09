@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             name: form.name.value,
             email: form.email.value,
             message: form.message.value,
+            phone: form.phone.value,
           }),
         }
       );
