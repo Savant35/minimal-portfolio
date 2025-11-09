@@ -74,26 +74,17 @@
   <main>
     <nav class="nav-menu" id="nav-menu">
       <ul class="nav-list">
-        <li class="nav-item" id="about">About</li>
-        <li class="nav-item" id="resume">Resume</li>
-        <li class="nav-item" id="portfolio">Portfolio</li>
-        <li class="nav-item" id="Contact">Contact</li>
+        <li class="nav-item show" data-target="about-section">About</li>
+        <li class="nav-item" data-target="resume-section">Resume</li>
+        <li class="nav-item" data-target="portfolio-section">Portfolio</li>
+        <li class="nav-item" data-target="contact-section">Contact</li>
       </ul>
     </nav>
-    <section class="hidden" id="about-section">
-      <!--
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item" id="about">About</li>
-          <li class="nav-item" id="resume">Resume</li>
-          <li class="nav-item" id="portfolio">Portfolio</li>
-          <li class="nav-item" id="Gallery">Gallery</li>
-          <li class="nav-item" id="Contact">Contact</li>
-        </ul>
-      </nav>
-    -->
+
+    <section class="section-container active" id="about-section">
 
       <p class="section-title">About</p>
+
       <p class="about-summary">
         I'm Creative Director and U/UX Designer from Sydney, Australia, working in web development and print media. 1
         enjoy turning complex problems into simple,
@@ -202,7 +193,7 @@
       </div>
     </section>
 
-    <section id="contact-section">
+    <section class="section-container" id="contact-section">
 
       <div class="wrapper">
         <form class="letter" id="contactForm">
@@ -226,7 +217,7 @@
 
     </section>
 
-    <section id="portfolio-section">
+    <section class="section-container" id="portfolio-section">
 
       <p class="section-title">My Projects</p>
 

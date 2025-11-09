@@ -40,6 +40,8 @@ body {
   padding: 5%;
 }
 
+/*--================== portfolio card ==================--*/
+
 .sidebar {
   border-radius: 2em;
   width: 100%;
@@ -136,16 +138,36 @@ body {
   box-shadow: none;
 }
 
-#about-section {
+
+.section-container {
   margin-top: 0px;
-  padding-top: 20px;
+  padding-top: 30px;
   width: 100%;
   background-color: var(--background-color2);
   border-radius: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 20px; 
+  display:none
+}
+
+#contact-section {
+  color: var(--ink);
+  font-family: monospace;
+  min-height: 20rem;
+}
+
+.section-container.active {
+  display: block;
+}
+
+content-section.hidden {
   display: none;
 }
 
+.nav-item.show {
+  color: hsl(65, 100%, 50%); 
+}
+
+/*--============================= Nav Menue =======================--*/
 .nav-menu {
   margin-top: 20px;
   margin-bottom: -25px;
@@ -233,15 +255,6 @@ body {
 
 
 /*--===================Resume Section =====================--*/
-#resume-section {
-  margin-top: 0px;
-  padding-top: 20px;
-  width: 100%;
-  background-color: var(--background-color2);
-  border-radius: 20px;
-  padding-bottom: 20px;
-  display: none;
-}
 
 .wrapper {
   padding: 1.5rem;
@@ -324,16 +337,6 @@ p {
 }
 
 /*--============================= Contact Section ==============================--*/
-
-#contact-section {
-  padding-top:3rem;
-  color: var(--ink);
-  text-align: center;
-  font-family: monospace;
-  min-height: 20rem;
-  background-color: var(--background-color2);
-  display:none;
-}
 
 #contact-section h1 {
   font-size: 2rem;
@@ -607,15 +610,6 @@ p {
 
 
 /*---======================== Portfolio ==========================--*/
-
-#portfolio-section {
-  margin-top: 0px;
-  padding-top: 30px;
-  width: 100%;
-  background-color: var(--background-color2);
-  border-radius: 20px;
-  padding-bottom: 20px;
-}
 
 #portfolio-container {
   display: flex;
