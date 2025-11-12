@@ -38,7 +38,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 5%;
-  overflow:auto;
+  overflow: auto;
 }
 
 /*--================== portfolio card ==================--*/
@@ -146,8 +146,8 @@ body {
   width: 100%;
   background-color: var(--background-color2);
   border-radius: 20px;
-  padding-bottom: 20px; 
-  display:none
+  padding-bottom: 20px;
+  display: none
 }
 
 #contact-section {
@@ -165,7 +165,7 @@ content-section.hidden {
 }
 
 .nav-item.show {
-  color: hsl(65, 100%, 50%); 
+  color: hsl(65, 100%, 50%);
 }
 
 /*--============================= Nav Menue =======================--*/
@@ -499,17 +499,20 @@ p {
 #contact-section .result-message {
   position: relative;
   opacity: 0;
-  transform: translateY(2rem); /* start slightly below */
+  transform: translateY(2rem);
+  /* start slightly below */
   transition:
-    transform 1s ease-out 1s,  /* slide-up over 1s, starts after 1s delay */
-    opacity 2s ease-in 1s;     /* fade-in over 2s, starts after 1s delay */
+    transform 1s ease-out 1s,
+    /* slide-up over 1s, starts after 1s delay */
+    opacity 2s ease-in 1s;
+  /* fade-in over 2s, starts after 1s delay */
   text-align: center;
   font-weight: bold;
 }
 
 #contact-section.sent .result-message {
   opacity: 1;
-  transform: translateY(9rem); 
+  transform: translateY(9rem);
   color: green;
 }
 
@@ -520,7 +523,7 @@ p {
   transition: opacity 0.5s ease-in;
   z-index: 5;
   font-size: .8rem;
-  transform: translateY(19.5rem); 
+  transform: translateY(19.5rem);
 }
 
 #contact-section .centered {
@@ -621,7 +624,8 @@ p {
   width: 100%;
   margin-top: 20px;
 }
-#portfolio-container p { 
+
+#portfolio-container p {
   padding: 0;
   margin: 0;
   margin-left: 5px;
@@ -635,45 +639,69 @@ p {
   width: 90%;
   text-decoration: none;
 }
-#portfolio-container img{
+
+#portfolio-container img {
   padding: 8px;
   background-color: hsl(0, 1%, 36%);
-  width:100%;
+  width: 100%;
   border-radius: 10px;
   height: 200px;
 }
 
 @media screen and (min-width:800px) {
 
-body{
-  display: flex;
-  gap: 10px;
-  border: 2px solid white;
-  padding: 20px;
-  height: 100vh;
-  overflow: auto;
-}
-.sidebar {
-  width: 30%;
-  border-radius: 20px;
-  height: 90%;
-}
-main {
-  height: 95%;
-  width: 70%;
-}
-.section-container{
-  height: 100%;
-  overflow: auto;
-}
-.nav-menu {
-  padding-top: 0;
-  margin-top: 0;
+  body {
+    display: flex;
+    gap: 10px;
+    border: 2px solid white;
+    padding: 20px;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  .sidebar {
+    width: 30%;
+    border-radius: 20px;
+    height: 90%;
+  }
+
+  main {
+    height: 95%;
+    width: 70%;
+  }
+
+  .section-container {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .nav-menu {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .profile p {
+    font-size: 2rem;
+  }
+
+  #portfolio-section {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  #portfolio-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    overflow: auto;
+  }
+
+  #portfolio-container a {
+    width: auto;
+    flex: 1 1 35%;
+    height: 300px;
+  }
 }
 
-.profile p {
-  font-size: 2rem;
-}
-
-
-}
